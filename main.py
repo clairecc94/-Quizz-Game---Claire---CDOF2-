@@ -102,14 +102,36 @@ class Game:
             "Amazing, that's the right answer! 🚀",
             "Fantastic! Keep it up! 🏆",
             "Impressive work, that's correct! 🙌",
+            "You're unstoppable! Excellent answer! 🔥",
+            "Brilliant! You're on a roll! 💡",
+            "Spot on! You're a genius! 🧠",
+            "Correct! You're crushing it! 🏅",
+            "Nice work! You're doing amazing! 🎯",
+            "Perfect answer! Keep the streak alive! 🎶",
+            "That's it! You're on fire! 🔥",
+            "Excellent! Keep those answers coming! 💪",
+            "You’ve got it! Great thinking! 🧐",
+            "Absolutely correct! You’re a star! 🌟",
         ]
+
         self.encouragements = [
             "Don't worry, you'll get the next one! 💪",
             "Keep going, you can do it! 🌟",
             "That was close, try again! 🔄",
             "No problem, you'll get it next time! 🌈",
             "Don't give up, you're doing great! ✨",
+            "Mistakes are part of learning! Keep at it! 📘",
+            "You’re improving with every question! 🔧",
+            "Almost there! Keep your head up! 🌟",
+            "Don't sweat it, you'll ace the next one! 🍀",
+            "Stay positive! You're doing well! 😊",
+            "You're on the right track, keep going! 🛤️",
+            "Take a deep breath and try again! 🌬️",
+            "You’ve got this, don’t lose hope! 🌈",
+            "Every mistake is a step towards success! 🪜",
+            "Stay focused! Success is just ahead! 🎯",
         ]
+
 
     def display_question(self, question):
         print(f"Theme: {question['theme']} | Difficulty: {question['difficulty']}")
