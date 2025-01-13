@@ -1,8 +1,8 @@
 class Question:
-    def __init__(self,difficulty,theme,answer):
+    def __init__(self,difficulty,answer):
         self.questions = self.Create_Question
         self.difficulty = difficulty
-        self.theme = theme
+        self.theme = [Science,History,Geography]
         self.answer = answer
         self.correct = False
 
