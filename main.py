@@ -4,7 +4,7 @@ class Question:
     def __init__(self, difficulty, answer):
         self.questions = self.Create_Question()
         self.difficulty = difficulty
-        self.theme = ["Science", "History", "Geography"]
+        self.theme = ["Science", "History", "Geography","Art", "Sport"]
         self.answer = answer
         self.correct = False
 
@@ -75,6 +75,50 @@ class Question:
                 "question": "Which country has the most natural lakes?",
                 "options": ["Canada", "Brazil", "Russia", "United States"],
                 "correct_answer": "Canada",
+            },
+            # Art
+            {
+                "theme": "Art",
+                "difficulty": "Easy",
+                "question": "Who painted the Mona Lisa?",
+                "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+                "correct_answer": "Leonardo da Vinci",
+            },
+            {
+                "theme": "Art",
+                "difficulty": "Medium",
+                "question": "Which artist is famous for the painting 'The Persistence of Memory'?",
+                "options": ["Claude Monet", "Salvador Dalí", "Vincent van Gogh", "Pablo Picasso"],
+                "correct_answer": "Salvador Dalí",
+            },
+            {
+                "theme": "Art",
+                "difficulty": "Hard",
+                "question": "In what year was Picasso's painting 'Guernica' completed?",
+                "options": ["1937", "1946", "1929", "1951"],
+                "correct_answer": "1937",
+            },
+            # Sport
+            {
+                "theme": "Sport",
+                "difficulty": "Easy",
+                "question": "How many players are there in a soccer team on the field?",
+                "options": ["10", "11", "12", "9"],
+                "correct_answer": "11",
+            },
+            {
+                "theme": "Sport",
+                "difficulty": "Medium",
+                "question": "In which year were the first modern Olympic Games held?",
+                "options": ["1896", "1900", "1924", "1888"],
+                "correct_answer": "1896",
+            },
+            {
+                "theme": "Sport",
+                "difficulty": "Hard",
+                "question": "Which country has won the most FIFA World Cups?",
+                "options": ["Germany", "Italy", "Argentina", "Brazil"],
+                "correct_answer": "Brazil",
             },
         ]
         return questions
@@ -182,7 +226,7 @@ class Game:
         question_obj = Question(difficulty="", answer="")
 
         while True:
-            print("\nAvailable Themes: Science, History, Geography")
+            print("\nAvailable Themes: Science, History, Geography, Art, Sport")
             theme = input("Choose a theme: ").capitalize()
             if theme not in question_obj.theme:
                 print("Invalid theme. Please choose from the available themes.")
