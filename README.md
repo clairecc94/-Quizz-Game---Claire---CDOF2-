@@ -5,7 +5,7 @@
 - [Features](#features)
 - [Installing](#installing)
 - [How to Play](#how-to-play)
-- [Built with](#built-with)
+- [Build with](#build-with)
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
