@@ -16,9 +16,10 @@ A simple quiz game where players answer questions to win.
 
 ## Installing
 1. Clone the repository:
+  ```bash
    git clone https://github.com/clairecc94/-Quizz-Game---Claire---CDOF2-
    cd Quiz-Game
-2. Run the Game:
+3. Run the Game:
    """
    python main.py
    """
