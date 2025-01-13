@@ -1,2 +1,3 @@
 # -Quizz-Game---Claire---CDOF2-
-{description}
+{A simple quiz game where players answer questions to win.}
+
