@@ -7,6 +7,7 @@ class Question:
         self.theme = ["Science", "History", "Geography","Art", "Sport"]
         self.answer = answer
         self.correct = False
+        self.current_question = None
 
     def Create_Question(self):
         questions = [
@@ -95,7 +96,7 @@ class Question:
                 "theme": "Art",
                 "difficulty": "Hard",
                 "question": "In what year was Picasso's painting 'Guernica' completed?",
-                "options": ["1937", "1946", "1929", "1951"],
+                "options": ["1937", "1945", "1929", "1951"],
                 "correct_answer": "1937",
             },
             # Sport
@@ -124,10 +125,9 @@ class Question:
         return questions
 
     def is_correct(self):
-        for question in self.questions:
-            if self.answer.lower() == question["correct_answer"].lower():
-                self.correct = True
-                break
+        """Check if the answer is correct for the current question."""
+        if self.current_question and self.answer.lower() == self.current_question["correct_answer"].lower():
+            self.correct = True
         else:
             self.correct = False
 
@@ -204,6 +204,7 @@ class Game:
         for question in questions:
             print("\n" + "=" * 40)
             self.display_question(question)
+            question_obj.current_question = question
             user_answer = self.get_user_answer(question)
 
             # Check if the answer is correct
