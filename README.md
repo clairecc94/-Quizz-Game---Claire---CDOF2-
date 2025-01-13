@@ -46,7 +46,7 @@ Contributions are welcome to make the game even better! Here’s how:
 5. Open a pull request.
 
 ## Authors
-clairecc94 - Developer and maintainer.
+clairecc94 - Initial work.
 
 ## License
 This project is licensed under the MIT License 
