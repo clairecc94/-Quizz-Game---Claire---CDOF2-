@@ -1,4 +1,4 @@
-from question import get_question
+from question import *
 class Game:
     def __init__(self):
         self.score = 0
@@ -25,20 +25,20 @@ class Game:
         for t in question.theme:
                 questions = get_question(t, difficulty)
 
-            if not questions:
-                print("No questions available for this theme and difficulty.")
-                return
+                if not questions:
+                    print("No questions available for this theme and difficulty.")
+                    return
 
-            for question in questions:
-                print("\n" + "=" * 40)
-                self.display_question(question)
-                user_answer = self.get_user_answer(question)
+                for question in questions:
+                    print("\n" + "=" * 40)
+                    self.display_question(question)
+                    user_answer = self.get_user_answer(question)
 
-                if question.is_correct(user_answer):
-                    print("Correct!")
-                    self.score += 1
-                else:
-                    print(f"Wrong! The correct answer was: {question.correct_answer}")
+                    if question.is_correct(user_answer):
+                        print("Correct!")
+                        self.score += 1
+                    else:
+                        print(f"Wrong! The correct answer was: {question.correct_answer}")
 
         print("\n" + "=" * 40)
         print(f"End of round. Your score: {self.score}")

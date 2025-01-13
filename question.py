@@ -2,7 +2,7 @@ class Question:
     def __init__(self,difficulty,answer):
         self.questions = self.Create_Question
         self.difficulty = difficulty
-        self.theme = [Science,History,Geography]
+        self.theme = ["Science","History","Geography"]
         self.answer = answer
         self.correct = False
 
@@ -80,7 +80,7 @@ class Question:
 
 
     def is_correct(self):
-        if answer.lower == correct_answer.lower:
+        if self.answer.lower == self.questions.correct_answer.lower:
             self.correct = True
         else :
             self.correct = False
@@ -88,5 +88,5 @@ class Question:
     
     def get_question(self,theme,difficulty):
         for q in self.questions:
-            if q.theme = theme and q.difficulty = difficulty:
+            if q.theme == theme and q.difficulty == difficulty:
                 return q
