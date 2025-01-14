@@ -4,9 +4,10 @@ class Question:
     def __init__(self, difficulty, answer):
         self.questions = self.Create_Question()
         self.difficulty = difficulty
-        self.theme = ["Science", "History", "Geography"]
+        self.theme = ["Science", "History", "Geography","Art", "Sport"]
         self.answer = answer
         self.correct = False
+        self.current_question = None
 
     def Create_Question(self):
         questions = [
@@ -76,14 +77,57 @@ class Question:
                 "options": ["Canada", "Brazil", "Russia", "United States"],
                 "correct_answer": "Canada",
             },
+            # Art
+            {
+                "theme": "Art",
+                "difficulty": "Easy",
+                "question": "Who painted the Mona Lisa?",
+                "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+                "correct_answer": "Leonardo da Vinci",
+            },
+            {
+                "theme": "Art",
+                "difficulty": "Medium",
+                "question": "Which artist is famous for the painting 'The Persistence of Memory'?",
+                "options": ["Claude Monet", "Salvador Dalí", "Vincent van Gogh", "Pablo Picasso"],
+                "correct_answer": "Salvador Dalí",
+            },
+            {
+                "theme": "Art",
+                "difficulty": "Hard",
+                "question": "In what year was Picasso's painting 'Guernica' completed?",
+                "options": ["1937", "1945", "1929", "1951"],
+                "correct_answer": "1937",
+            },
+            # Sport
+            {
+                "theme": "Sport",
+                "difficulty": "Easy",
+                "question": "How many players are there in a soccer team on the field?",
+                "options": ["10", "11", "12", "9"],
+                "correct_answer": "11",
+            },
+            {
+                "theme": "Sport",
+                "difficulty": "Medium",
+                "question": "In which year were the first modern Olympic Games held?",
+                "options": ["1896", "1900", "1924", "1888"],
+                "correct_answer": "1896",
+            },
+            {
+                "theme": "Sport",
+                "difficulty": "Hard",
+                "question": "Which country has won the most FIFA World Cups?",
+                "options": ["Germany", "Italy", "Argentina", "Brazil"],
+                "correct_answer": "Brazil",
+            },
         ]
         return questions
 
     def is_correct(self):
-        for question in self.questions:
-            if self.answer.lower() == question["correct_answer"].lower():
-                self.correct = True
-                break
+        """Check if the answer is correct for the current question."""
+        if self.current_question and self.answer.lower() == self.current_question["correct_answer"].lower():
+            self.correct = True
         else:
             self.correct = False
 
@@ -160,6 +204,7 @@ class Game:
         for question in questions:
             print("\n" + "=" * 40)
             self.display_question(question)
+            question_obj.current_question = question
             user_answer = self.get_user_answer(question)
 
             # Check if the answer is correct
@@ -182,7 +227,7 @@ class Game:
         question_obj = Question(difficulty="", answer="")
 
         while True:
-            print("\nAvailable Themes: Science, History, Geography")
+            print("\nAvailable Themes: Science, History, Geography, Art, Sport")
             theme = input("Choose a theme: ").capitalize()
             if theme not in question_obj.theme:
                 print("Invalid theme. Please choose from the available themes.")
