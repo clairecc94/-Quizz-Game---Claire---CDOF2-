@@ -1,13 +1,31 @@
 # -Quizz-Game---Claire---CDOF2-
 
+## Table of Contents
+- [Description](#description)
+- [Features](#features)
+- [Installing](#installing)
+- [How to Play](#how-to-play)
+- [Build with](#build-with)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [License](#license)
+
 ## Description
-A simple quiz game where players answer questions to win.
+Do you enjoy testing your knowledge across various topics? This Quiz Game challenges players with questions from categories like Science, History, and more! With three difficulty levels, there’s something for everyone – from beginners to trivia experts.
+
+Can you answer questions like:
+*"What planet is known as the Red Planet?"* or
+*"In which year were the first modern Olympic Games held?"*
+
+Sharpen your knowledge and compete for the highest score!
 
 ## Features
 - Few themes available:
   - Science
   - History
   - Geography
+  - Art
+  - Sport
 - Three difficulty levels:
   - Easy
   - Medium
@@ -25,13 +43,16 @@ A simple quiz game where players answer questions to win.
    python main.py
 ```
 
-
 ## How to Play
 1. When the game starts, choose a theme from the available options.
+![alt text](image.png)
 2. Select a difficulty level.
+![alt text](image-1.png)
 3. Answer the questions by entering the number corresponding to your choice.
+![alt text](image-2.png)
 4. See the answer and accumulate points.
 5. Continue playing or exit the game at the end of each round.
+![alt text](image-3.png)
 
 ## Build with
 Python
